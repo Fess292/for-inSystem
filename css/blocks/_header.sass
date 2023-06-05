@@ -41,7 +41,7 @@
             margin: 40px 0 0
 
 .order
-    padding-top: 80px
+    padding: 80px 0
     background: #000
     background: #272733
     position: relative
@@ -116,7 +116,7 @@
     z-index: 5
     display: flex
     flex-wrap: wrap
-    input:not(.slider), select
+    input:not(.slider,#input-file), select
         font-family: inherit
         font-weight: 400
         font-size: 18px
@@ -127,14 +127,46 @@
         margin: 0 auto 20px
         outline: 0
         border: 0
-        width: 100%
-        max-width: 370px
         border-radius: 3px
         padding-left: 10px
         color: #272733
         &::placeholder
             color: #272733
-    // input.slider
+    &__file
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        input[type='file']
+            display: none
+        label
+            width: 100%
+            height: 48px
+            font-family: 'Lato'
+            font-weight: 400
+            font-size: 15px
+            line-height: 1.2
+            cursor: pointer
+            outline: 0
+            user-select: none
+            background: #FFFFFF
+            border: 2px solid #3E9CDC
+            border-radius: 3px
+            color: #272733
+            display: flex
+            justify-content: center
+            align-items: center
+            text-transform: uppercase
+            &:hover
+                border-color: hsl(0, 0%, 21%)
+            &:active
+                background-color: hsl(0, 0%, 96%)
+            svg
+                margin-right: 10px
+                max-width: 18px
+                max-height: 20px
+
     &__range
         width: 100%
         max-width: 770px
@@ -241,3 +273,29 @@
         color: #272733
         option
             color: #272733
+    input:not(.slider), select, .button
+        width: 100%
+        max-width: 370px
+    .button
+        span
+            font-size: 15px
+
+.footer
+    font-size: 13px
+    font-weight: 400
+    line-height: 1.2
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    h5
+        color: #FFFFFF
+    &__pay
+        position: relative
+        &::before,&::after
+            content: ''
+            position: absolute
+            top: 0
+            width: 1px
+            height: 18px
+            background: #C3C3C3
