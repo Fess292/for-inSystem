@@ -1,0 +1,154 @@
+$blue: #3E9CDC
+*, :before, :after
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+.container
+	// width: 100%
+	// width: 320px
+	margin: 0 auto
+	position: relative
+	// padding: 0 3.13% 0 3.13%
+	padding: 0 6.250vw 0 6.250vw
+	// padding: 0 20px
+
+.wrapper
+	overflow: hidden
+	position: relative
+	margin: 0 auto
+
+body, input, button
+	font-family: 'Lato', sans-serif
+	// font-size: 14px
+	// line-height: 1.2
+	// color: #212121
+	// font-weight: 400
+
+img
+	margin: 0 auto
+	display: block
+
+
+
+a
+	text-decoration: none
+
+#spriteSvg
+	position: absolute
+	top: -10px
+	left: -10px
+	width: 0
+	height: 0
+	opacity: 0
+
+.button
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 6px 10px 10px
+	outline: none
+	margin: 20px auto 0
+	width: 203px
+	height: 54px
+	border: none
+	font-family: 'Lato', sans-serif
+	// background: linear-gradient(0deg, #212121, #212121), linear-gradient(76.6deg, #FF6D00 0%, #FFAB00 20.43%, #FFD600 42.05%, #AEEA00 59.62%, #64DD17 79.17%, #00C853 100%)
+	// color: #fff
+	// text-transform: uppercase
+	// letter-spacing: 2px
+	// font-size: 14px
+	// line-height: 1
+	overflow: hidden
+	transition: 0.2s
+	border-radius: 4px
+	cursor: pointer
+	text-align: center
+	span
+		font-family: 'Lato', sans-serif
+		font-weight: 700
+		line-height: 1.2
+		position: relative
+		z-index: 10
+	&::before, &::after
+		content: ''
+		position: absolute
+		top: 0px
+		bottom: 0px
+		left: 0px
+		right: 0px
+		transition: opacity .4s
+	&::before
+		opacity: 1
+	&::after
+		opacity: 0
+	&--blue
+		border: 1px solid #FFFFFF
+		span
+			color: #fff
+		&::before
+			background: $blue		
+		&::after
+			background: #fff
+		&:hover
+			border-color: $blue
+			span
+				color: $blue		
+			
+	&--white
+		border: 1px solid #6F6D7B
+		span
+			color: #2A2B30
+		&::before
+			background: #fff			
+		&::after
+			background: $blue	
+		&:hover
+			border-color: #fff
+			span
+				color: #fff
+
+
+	&:hover
+		&::before
+			opacity: 0
+		&::after
+			opacity: 1
+
+.bg
+	position: absolute
+	height: 100%
+	left: 50%
+	top: 50%
+	transform: translate(-50%,-50%)
+	z-index: -10
+
+@import 'blocks/_header.sass'
+@import 'blocks/_media'
+
+
+// 	<svg class="icon">
+//   <use xlink:href="#promo-ico-1"></use>
+// </svg>
+// 	<svg class="icon">
+//   <use xlink:href="#promo-ico-2"></use>
+// </svg>
+// 	<svg class="icon">
+//   <use xlink:href="#promo-ico-3"></use>
+// </svg>
+// 	<svg class="icon">
+//   <use xlink:href="#promo-ico-4"></use>
+// </svg>
+// <svg class="icon">
+// 	<use xlink:href="#sad-smile"></use>
+// </svg>
+// 	<svg class="icon">
+//   <use xlink:href="#test-ico"></use>
+// </svg>
+// 	<svg class="icon">
+//   <use xlink:href="#doing-ico-1"></use>
+// </svg>
+// 	<svg class="icon">
+//   <use xlink:href="#doing-ico-2"></use>
+// </svg>
