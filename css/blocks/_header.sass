@@ -11,6 +11,7 @@
     margin-top: -50px
     overflow: hidden
     position: relative
+    padding-bottom: 50px
     h1
         font-size: 24px
         margin-top: 70px
@@ -30,8 +31,17 @@
             &::marker
                 content: '- '
                 font-size: 17px
+    &__buttons
+        max-width: 396px
+        display: flex
+        align-items: center
+        justify-content: space-around
+        flex-wrap: wrap
+        .button
+            margin: 40px 0 0
 
 .order
+    padding-top: 80px
     background: #000
     background: #272733
     position: relative
@@ -46,6 +56,7 @@
         span
             color: $blue
     &__subtitle
+        margin-top: 30px
         text-align: center
         color: #BBBBBB
         line-height: 1.2
@@ -54,9 +65,15 @@
 
     &__steps
         display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-around
+        margin-right: -10px
 
         .step
             margin-top: 40px
+            margin-right: 10px
+            width: 156px
             display: flex
             flex-direction: column
             justify-content: center
@@ -74,18 +91,13 @@
                 svg
                     max-width: 39px
                     max-height: 41px
-                &::after
-                    width: 100px
-                    content: ''
-                    position: absolute
-                    margin: 20px 0
-                    height: 5px
-                    padding: 0
-                    border: none
-                    border-width: 0 0 7px
-                    border-style: solid
-                    border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 1" width="8" height="4"><circle fill="orange" cx="1" cy="0.5" r="0.5"></circle></svg>') 0 0 100% repeat
-                    background-position: 50%
+                // &::after
+                //     width: 110px
+                //     height: 6px
+                //     background: url("data:image/svg+xml,%3Csvg width='111' height='6' viewBox='0 0 111 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='81.0111' cy='3' r='3' fill='%23C4C4C4'/%3E%3Ccircle cx='107.011' cy='3' r='3' fill='%23C4C4C4'/%3E%3Ccircle cx='55.0111' cy='3' r='3' fill='%23C4C4C4'/%3E%3Ccircle cx='29.0111' cy='3' r='3' fill='%23C4C4C4'/%3E%3Ccircle cx='3.01111' cy='3' r='3' fill='%23C4C4C4'/%3E%3C/svg%3E")
+                //     content: ''
+                //     position: absolute
+                //     right: -110px
             p
                 margin-top: 20px
                 font-weight: 400
@@ -95,39 +107,137 @@
                 color: #FFFFFF
 
 .form
-    padding: 20px 20px 30px
-    margin: 20px auto 0
-    border-radius: 5px
-    background: #FFF
-    width: 100%
-    max-width: 360px
-    position: relative
+    max-width: 370px
+    // padding: 20px 20px 30px
+    margin: 40px auto 0
+    // width: 100%
+    // max-width: 360px
+    // position: relative
     z-index: 5
     display: flex
-    flex-direction: column
-    h3
-        text-align: center
-        margin-bottom: 20px
-    input, select
-        font-family: 'Montserrat'
-        font-weight: 700
-        font-size: 12px
-        background-color: #EEF6FA
+    flex-wrap: wrap
+    input:not(.slider), select
+        font-family: inherit
+        font-weight: 400
+        font-size: 18px
+        background-color: rgba(255, 255, 255, 0.85)
         line-height: 1.79
-        height: 37px
+        height: 48px
         display: block
         margin: 0 auto 20px
         outline: 0
         border: 0
         width: 100%
-        border-radius: 5px
-        padding-left: 20px
-        color: #00223B
+        max-width: 370px
+        border-radius: 3px
+        padding-left: 10px
+        color: #272733
         &::placeholder
-            color: #00223B
+            color: #272733
+    // input.slider
+    &__range
+        width: 100%
+        max-width: 770px
+        margin: 0 auto
+        h2
+            display: flex
+            justify-content: space-between
+            font-weight: 400
+            line-height: 1.2
+            font-size: 18px
+            color: #FFFFFF
+            align-items: end
+
+        input.slider
+            width: 100%
+            height: 6px
+            -webkit-appearance: none
+            border-radius: 8px
+            &:focus
+                outline: none
+
+            /*webkit*/
+            &::-webkit-slider-thumb
+                -webkit-appearance: none
+                width: 24px
+                height: 24px
+                border-radius: 16px
+                background: #42A9ED
+                border: 3px solid #286690
+                box-shadow: 0 0 2px black
+                margin-top: calc(max((6px - 1px - 1px) * 0.5,0px) - max(24px * 0.5,3px))
+
+            &::-webkit-slider-runnable-track
+                height: 6px
+                border: 1px solid #FFFFFF
+                border-radius: 8px
+                background: #fff
+                box-shadow: none
+
+            &::-webkit-slider-thumb:hover
+                background: #0061C3
+
+            &::-webkit-slider-thumb:active
+                background: #2f98f9
+
+            /*mozilla*/
+            &::-moz-range-thumb
+                width: max(calc(24px - 3px - 3px),0px)
+                height: max(calc(24px - 3px - 3px),0px)
+                border-radius: 16px
+                background: #42A9ED
+                border: 3px solid #286690
+                box-shadow: 0 0 2px black
+
+            &::-moz-range-track
+                height: max(calc(6px - 1px - 1px),0px)
+                border: 1px solid #FFFFFF
+                border-radius: 8px
+                background: #fff
+                box-shadow: none
+
+            &::-moz-range-thumb:hover
+                background: #0061C3
+
+            &::-moz-range-thumb:active
+                background: #2f98f9
+
+            /*ms*/
+            &::-ms-fill-upper
+                background: transparent
+                border-color: transparent
+
+            &::-ms-fill-lower
+                background: transparent
+                border-color: transparent
+
+            &::-ms-thumb
+                width: 24px
+                height: 24px
+                border-radius: 16px
+                background: #42A9ED
+                border: 3px solid #286690
+                box-shadow: 0 0 2px black
+                margin-top: 0
+                box-sizing: border-box
+
+            &::-ms-track
+                height: 6px
+                border-radius: 8px
+                background: #fff
+                border: 1px solid #FFFFFF
+                box-shadow: none
+                box-sizing: border-box
+
+            &::-ms-thumb:hover
+                background: #0061C3
+
+            &::-ms-thumb:active
+                background: #2f98f9
+
     select
-        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E%0A") no-repeat 95% 50%, #EEF6FA
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E%0A") no-repeat 95% 50%, rgba(255, 255, 255, 0.85)
         appearance: none
-        color: #00223B
+        color: #272733
         option
-            color: #00223B
+            color: #272733
