@@ -183,21 +183,26 @@
 
     #cssmenu  {
         width:100%;
-        max-width:600px;
+        max-width:280px;
         display:none;
-        background-color:#651d32;
+        background-color:#272733;
         border:1px solid rgba(0,0,0,0.2);
         box-sizing:border-box;
         z-index:999999990;
+        padding-top: 50px;
     }
 
     /*--begin mark1--*/
 
     #cssmenu  {
-        position:fixed;top:0;bottom:0;left:0;right:0;height:100%!important;
+        position:fixed;top:0;
+        /* bottom:0; */
+        left:0;right:0;
+        /* height:100%!important; */
         right:-130%;
         left:auto; box-shadow:-4px 0 18px rgba(0,0,0,0.3);
         transition:all 411ms cubic-bezier(.7, 0,1,.4);
+        border-radius: 0 0 0 40px
     }
 
     #cssmenu.active {
@@ -244,6 +249,7 @@
 .header__icon-wrapper {
     padding:5px;
     text-align:right;
+    height: 50px;
 }
 .header__icon {
     padding:9px;
