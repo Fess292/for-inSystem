@@ -3,304 +3,79 @@
     // .container
     //     width: 400px
 
-@media screen and (min-width: 768px)
-    // .bg
-    //     .decor
-    //         height: 100%
-    //         .line
-    //             width: 180px
-    //             height: 110%
-    //             background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
-    //             &:not(:last-child)
-    //                 margin-right: 110px
-    .prod-box
-        width: 310px
-        &__front
-            width: 140px
-        &__back
-            margin-top: -260px
-            margin-left: 120px
-            width: 130px
-    section
-        &:not(:first-child)
-            padding-top: 60px
+@media screen and (min-width: 800px)
+    .header
+        &__icon-wrapper
+            height: 0
+            padding: 0
+        &__fixed
+            left: 0
     .promo
-        padding-top: 30px
-        &__wrapper
-            display: grid
-            grid-template-columns: minmax(auto, 280px) minmax(auto, 300px) minmax(auto, 280px) minmax(auto, 300px)
-            grid-template-rows: repeat(3, auto)
-        .button
-            align-self: center
-            // margin: 0
-            // margin-top: 60px
-            grid-column: 1/2
-            grid-row: -1/-2
-        .title
-            grid-column: 1/3
-            grid-row: 1/2
+        padding-bottom: 100px
+        h1
+            margin-top: 145px
+    #cssmenu
+        li.header__logo
+            flex-grow: 2
             text-align: left
-        .price
-            align-self: center
-            // margin-top: 63px
-            grid-column: 2/3
-            grid-row: -1/-2
-        .h16
-            align-self: center
-            // margin-top: 40px
-            grid-column: -1/-2
-            grid-row: -1/-2
-        .prod-box
-            grid-column: -1/-2
-            grid-row: 1/3
-        &__list
-            grid-column: 1/3
-            grid-row: 2/3
-            // li
-            //     display: flex
-            //     width: 100%
-            //     align-items: center
-            //     justify-content: space-between
-            //     p
-            //         width: calc( 100% - 53px )
-            //         text-align: left
-            //         margin-top: 0
-            //     .ico
-            //         margin: 0
-
-    .normal
-        .container
-            display: grid
-            grid-template-columns: repeat(3, auto)
-            grid-template-rows: repeat(3, auto)
-        .prod-box
-            grid-column: 1/2
-            grid-row: 1/-1
-        .title
-            grid-column: 2/-1
-            grid-row: 1/2
-            text-align: left
-            margin: 0 0 20px
-        &__capsules
-            margin: 0
-            grid-column: 2/3
-            grid-row: 2/3
-            align-self: center
-            svg
-                max-width: 30px
-        .subtitle
-            grid-column: 3/4
-            grid-row: 2/3
-            align-self: center
-            text-align: left
-            margin-left: 20px
-        .button
-            margin: 20px 0 0
-            grid-column: 2/-1
-            grid-row: -1/-2
-            justify-self: start
-        &--mirrow
-            .prod-box
-                grid-column: -1/-2
-            .title
-                grid-column: 1/3
-                width: 360px
-            .normal__capsules
-                // width: 100px
-                grid-column: 1/2
-                justify-self: start
-            .subtitle
-                grid-column: 2/3
-                align-self: center
-                text-align: left
-                margin-left: 20px
-            .button
-                margin: 20px 0 0
-                grid-column: 1/3
-
-    .fear
-        &__wrapper
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
-            grid-template-rows: repeat(2, auto)
-            gap: 20px
-        &__item
-            &--4
-                margin-top: -70px
-
-    .compound
-        &__items
-            .item
-                margin-top: 40px
-                display: grid
-                grid-template-columns: repeat(2, auto)
-                grid-template-rows: auto
-                align-items: start
-                &__info
-                    margin: 0 0 0 20px
-                    b
-                        text-align: left
-        .subtitle
-            &--last
-                margin-top: 60px
-                margin-bottom: 40px
-
-    .support
-        &__items
+            // margin-right: min(5%, 487px)
+        ul
+            // padding: 0 10px
+            padding: 0 3.125vw 0 3.125vw
             display: flex
             justify-content: space-between
-            .item
-                &:not(:last-child)
-                    margin-right: 20px
+            align-items: center
 
-    .steps
-        &__items
-            display: flex
-            justify-content: space-between
-            flex-wrap: wrap
-            .step
-                flex: 48%
-                &:first-child
-                    margin-right: 20px
-            //     &:not(:last-child)
-            //         margin-right: 20px
-
-    .reviews
-        &__items
-            .review
-                display: grid
-                grid-template-columns: repeat(2, auto)
-                padding: 20px
-                p.tx12
-                    margin: 0 0 0 20px
-                    text-align: left
-                p.tx14
-                    // margin: 10px 0 0
-
-    .final
-        .container
-            display: grid
-            grid-template-columns: repeat(2, auto)
-            grid-template-rows: repeat(3, auto)
-        .title
-            grid-column: 1/2
-            grid-row: 1/2
-            text-align: left
-            width: 430px
-            padding-left: 30px
-        .h16
-            align-self: center
-            // margin-top: 40px
-            grid-column: 2/3
-            grid-row: -1/-2
-            width: 100%
-            max-width: 360px
-        .prod-box
-            grid-column: 1/2
-            grid-row: 2/-1
-            align-self: center
-        .form
-            grid-column: 2/3
-            grid-row: 1/3
+    .form
+        max-width: none
+        // input
+        //     margin: 0
+        &__file
+            order: 4
+            margin: 0 auto 20px
+        &__range
+            order: 5
+            margin: 0 auto 20px
+            width: 370px
+        .button
+            order: 6
+            margin-top: 0
 
 @media screen and (min-width: 990px)
-    // .container
-    //     width: 955px
-    .prod-box
-        width: 410px
-        &__front
-            width: 182px
-        &__back
-            margin-top: -350px
-            margin-left: 190px
-            width: 160px
-            &:before
-                top: -84px
-                right: -87px
-                left: -87px
-                bottom: -320px
-    .button
-        width: 260px
-        height: 65px
-        span
-            font-size: 24px
-        svg
-            width: 24px
-            height: 24px
-
-    .title
-        font-size: 44px
-
-    .subtitle
-        font-size: 20px
-        line-height: 1.5
-    .h16
-        width: 338px
-        font-size: 24px
-        line-height: 1.5
-        padding: 10px 20px
-    .tx14
-        font-size: 20px
-        line-height: 1.2
-    .tx12
-        font-size: 16px
-        line-height: 1.5
-    .list
-        font-size: 12px
-        li
-            position: relative
-            padding-left: 20px
-            margin-top: 5px
-            &::before
-                content: ''
-                position: absolute
-                width: 2px
-                height: 2px
-                left: 9px
-                top: 6px
-                background: #00223B
-                border-radius: 50%
-
-    .color-block
-        font-size: 12px
-
+    .header
+        height: 100px
     .promo
-        padding-top: 60px
-        .title
-            width: 543px
+        padding-bottom: 200px
+        h1
+            font-size: 48px
+        &__subtitle
+            font-size: 20px
+            margin-top: 80px
+        &__buttons
+            margin-top: 80px
+            justify-content: space-between
         &__list
+            margin-left: 23px
+            font-size: 20px
             li
-                p
-                    font-size: 20px
-                .ico
-                    svg
-                        max-width: 50px
-                        max-height: 50px
-        .prod-box
-            align-self: end
-            margin-bottom: 50px
-        .price
-            &__old
+                padding-left: 5px
                 font-size: 20px
-            &__new
-                font-size: 44px
-
-    .normal
-        &--mirrow
-            .title
-                width: 480px
-
-    .fear
-        .prod-box
-            margin-bottom: 50px
-
-    .final
-        padding-bottom: 85px
-        .title
-            width: 470px
-            // width: 670px
-            margin: 0
-            padding: 0
+    .order
+        padding: 121px 0 151px
+        &__title
+            font-size: 36px
+        &__steps
+            .step
+                // width: 188px
+                &:not(&:last-child)
+                    .step__ico
+                        &::after
+                            width: 110px
+                            height: 6px
+                            background: url("data:image/svg+xml,%3Csvg width='111' height='6' viewBox='0 0 111 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='81.0111' cy='3' r='3' fill='%23C4C4C4'/%3E%3Ccircle cx='107.011' cy='3' r='3' fill='%23C4C4C4'/%3E%3Ccircle cx='55.0111' cy='3' r='3' fill='%23C4C4C4'/%3E%3Ccircle cx='29.0111' cy='3' r='3' fill='%23C4C4C4'/%3E%3Ccircle cx='3.01111' cy='3' r='3' fill='%23C4C4C4'/%3E%3C/svg%3E")
+                            content: ''
+                            position: absolute
+                            right: -117px
 
 @media screen and (min-width: 1200px)
     // body

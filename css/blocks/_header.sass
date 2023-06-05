@@ -19,16 +19,20 @@
         font-weight: 700
         line-height: 1.2
         span
+            font-weight: 800
             color: $blue
+            // font-family: 'Raleway'
     &__subtitle
         margin-top: 40px
+        font-size: 16px
 
     &__list
         margin-top: 10px
         margin-left: 10px
-        font-size: 15px
+        
         li
             margin-top: 5px
+            font-size: 15px
             &::marker
                 content: '- '
                 font-size: 17px
@@ -55,6 +59,7 @@
         font-size: 36px
         color: #FFFFFF
         text-align: center
+        text-transform: uppercase
         span
             color: $blue
     &__subtitle
@@ -141,6 +146,7 @@
         justify-content: center
         align-items: center
         width: 100%
+        max-width: 370px
         input[type='file']
             display: none
         label
@@ -177,7 +183,6 @@
 
     &__range
         width: 100%
-        max-width: 770px
         margin: 0 auto
         h2
             display: flex
@@ -305,6 +310,8 @@
         text-align: center
         max-width: 310px
         margin-top: 10px
+        span
+            text-transform: uppercase
     &__pay
         max-width: 405px
         display: grid
