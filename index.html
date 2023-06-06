@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fonts/lato.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/chosen.min.css">
   <link rel="stylesheet" href="css/cssmenu.css">
   <link rel="stylesheet" href="css/style.css">
   <title>LoremIpsum</title>
@@ -61,7 +62,7 @@
       <div class="container">
 
         <h1>
-          <span>Lorem ipsum</span> dolor sit amet
+          <span>Lorem ipsum</span> dolor sit <br> amet
           consectetur <span>adipiscing</span>
         </h1>
         <h4 class="promo__subtitle">
@@ -164,9 +165,14 @@
         </ul>
 
         <form class="form" action="" method="post">
-          <select placeholder="Имя">
+          <select class="chosen" data-placeholder="Выберите тип системы">
             <option value="" disabled selected>Выберите тип системы</option>
-            <option value="Nemo enim ipsam">Sed ut perspiciatis</option>
+            <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+            <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+            <option value="Et harum quidem">Et harum quidem</option>
+            <option value="Temporibus autem">Temporibus autem</option>
+            <option value="Itaque earum rerum">Itaque earum rerum</option>
+            <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
             <option value="Nemo enim ipsam">Nemo enim ipsam</option>
             <option value="Et harum quidem">Et harum quidem</option>
             <option value="Temporibus autem">Temporibus autem</option>
@@ -326,6 +332,7 @@
     </symbol>
   </svg>
 
+  <script src="js/chosen.jquery.js"></script>
   <script src="js/main.js"></script>
 </body>
 
